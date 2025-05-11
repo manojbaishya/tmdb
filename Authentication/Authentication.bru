@@ -1,0 +1,15 @@
+meta {
+  name: Authentication
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{hostname}}/{{version}}/authentication
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}

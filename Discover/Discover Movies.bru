@@ -1,0 +1,22 @@
+meta {
+  name: Discover Movies
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{hostname}}/{{version}}/discover/movie?language=en-US&include_video=false&page=1&sort_by=popularity.desc
+  body: none
+  auth: inherit
+}
+
+params:query {
+  language: en-US
+  include_video: false
+  page: 1
+  sort_by: popularity.desc
+}
+
+headers {
+  Accept: application/json
+}
